@@ -39,8 +39,7 @@ bool Rasterizer::IsInsideTriangle(std::vector<float> vertex1_coor, std::vector<f
 	std::vector<float> e3 = { vertex1_coor[0] - vertex3_coor[0],vertex1_coor[1] - vertex3_coor[1],0 };
 
 	// Compute z direction of the result of 3 pairs of cross products
-	if ((MathUtility::VecCrossProduct(v1, e1)[2] < 0 && MathUtility::VecCrossProduct(v2, e2)[2] < 0 && MathUtility::VecCrossProduct(v3, e3)[2] < 0)||
-		(MathUtility::VecCrossProduct(v1, e1)[2] > 0 && MathUtility::VecCrossProduct(v2, e2)[2] > 0 && MathUtility::VecCrossProduct(v3, e3)[2] > 0))
+	if (MathUtility::VecCrossProduct(v1, e1)[2] > 0 && MathUtility::VecCrossProduct(v2, e2)[2] > 0 && MathUtility::VecCrossProduct(v3, e3)[2] > 0)
 	{
 		return true;
 	}

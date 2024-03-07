@@ -1,8 +1,8 @@
 #include "Global.h"
 
 // Static attribute setters
-const int GlobalSettings::window_width = 400;	
-const int GlobalSettings::window_height = 400;	
+const int GlobalSettings::window_width = 600;	
+const int GlobalSettings::window_height = 600;	
 const unsigned int GlobalSettings::update_time_interval = 1000 / 60; 
 const char* const GlobalSettings::window_title = "A Toy Render Pipeline";
 
